@@ -15,34 +15,6 @@ DevSecOps-22/
 └── index.md          # Course landing page
 ```
 
-## 🌐 GitHub Pages
-
-This repository is configured for GitHub Pages. View the live site at:
-**https://[your-username].github.io/DevSecOps-22/**
-
-### Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click **Settings** → **Pages**
-3. Under "Source", select **Deploy from a branch**
-4. Choose **main** branch and **/ (root)** folder
-5. Click **Save**
-6. Wait a few minutes for the site to build
-
-## 🛠️ Local Development
-
-To preview the site locally:
-
-```bash
-# Install Jekyll (if not installed)
-gem install bundler jekyll
-
-# Run local server
-bundle exec jekyll serve
-
-# Visit http://localhost:4000/DevSecOps-22/
-```
-
 ## 📖 Content
 
 ### Linux
