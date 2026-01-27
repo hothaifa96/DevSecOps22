@@ -545,12 +545,22 @@ body {
         <ul class="content-list">
           <li class="content-item">
             <div class="item-header">
+              <span class="item-title">Computer Basics: Hardware and Operating Systems</span>
+              <span class="item-badge">Beginner</span>
+            </div>
+            <p class="item-description">Understand CPU, registers, cache, RAM, storage, kernel, and how operating systems work</p>
+            <div class="item-links">
+              <a href="{{ site.baseurl }}/linux/lessons/01-computer-basics/" class="item-link">📖 Start Lesson</a>
+            </div>
+          </li>
+          <li class="content-item">
+            <div class="item-header">
               <span class="item-title">Linux Basic Commands</span>
               <span class="item-badge">Beginner</span>
             </div>
             <p class="item-description">Introduction to Linux, shell basics, filesystem structure, navigation, file operations, piping, and redirection</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/lessons/01-linux-basic-commands/" class="item-link">📖 Start Lesson</a>
+              <a href="{{ site.baseurl }}/linux/lessons/02-linux-basic-commands/" class="item-link">📖 Start Lesson</a>
             </div>
           </li>
         </ul>
