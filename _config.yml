@@ -1,11 +1,13 @@
 title: DevSecOps-22 Course
 description: Master DevSecOps with Hands-On Learning Experience
-baseurl: "/DevSecOps-22"
+baseurl: "/DevSecOps22"
 url: ""
 theme: jekyll-theme-minimal
 
 markdown: kramdown
 highlighter: rouge
+
+permalink: pretty
 
 exclude:
   - README.md
