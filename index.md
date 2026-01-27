@@ -550,7 +550,7 @@ body {
             </div>
             <p class="item-description">Introduction to Linux, shell basics, filesystem structure, navigation, file operations, piping, and redirection</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/lessons/01-linux-basic-commands" class="item-link">📖 Start Lesson</a>
+              <a href="{{ site.baseurl }}/linux/lessons/01-linux-basic-commands/" class="item-link">📖 Start Lesson</a>
             </div>
           </li>
         </ul>
@@ -578,7 +578,7 @@ body {
             </div>
             <p class="item-description">Practice essential Linux commands including navigation, file manipulation, permissions, and I/O redirection</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/labs/1-lab" class="item-link">🧪 Start Lab</a>
+              <a href="{{ site.baseurl }}/linux/labs/1-lab/" class="item-link">🧪 Start Lab</a>
             </div>
           </li>
         </ul>
@@ -606,7 +606,7 @@ body {
             </div>
             <p class="item-description">Comprehensive cheatsheet covering system info, navigation, file operations, text processing, networking, and more</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/cheatsheets/basic-linux-commands" class="item-link">📑 View Cheatsheet</a>
+              <a href="{{ site.baseurl }}/linux/cheatsheets/basic-linux-commands/" class="item-link">📑 View Cheatsheet</a>
             </div>
           </li>
         </ul>
@@ -644,7 +644,7 @@ body {
             </div>
             <p class="item-description">Printable reference for basic Linux commands</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/pdf/linux basic-commands.pdf" class="item-link">⬇️ Download PDF</a>
+              <a href="{{ site.baseurl }}/linux/pdf/linux%20basic-commands.pdf" class="item-link">⬇️ Download PDF</a>
             </div>
           </li>
         </ul>
