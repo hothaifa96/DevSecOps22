@@ -1,3 +1,8 @@
+---
+layout: default
+title: Linux Basic Commands Cheatsheet
+---
+
 # Linux Basic Commands Cheatsheet
 
 ## System Information
@@ -50,7 +55,7 @@ Show inode usage
 **du -sh**
 Show disk usage summary in human-readable format
 
-**du -sh ***
+**du -sh \***
 Show disk usage for all items in current directory
 
 **free -h**
@@ -118,7 +123,7 @@ List sorted by modification time oldest first
 **ls -R**
 List recursively including subdirectories
 
-**ls -d */**
+**ls -d \*/**
 List only directories in current location
 
 **tree**
@@ -327,7 +332,7 @@ Find files modified in last seven days
 **find /path -user username**
 Find files owned by specific user
 
-**find /path -name "*.txt" -delete**
+**find /path -name "\*.txt" -delete**
 Find and delete files matching pattern
 
 **find /path -perm 777**
@@ -368,7 +373,7 @@ Show lines not matching pattern
 **grep -c pattern filename**
 Count matching lines
 
-**grep -l pattern files***
+**grep -l pattern files\***
 List files containing pattern
 
 **grep -w pattern filename**
@@ -1041,7 +1046,7 @@ Discard all output
 
 ## Wildcards and Pattern Matching
 
-***filename***
+**_filename_**
 Match any characters
 
 **file?.txt**
@@ -1082,7 +1087,7 @@ Execute most recent command starting with string
 **!$**
 Reference last argument of previous command
 
-**!***
+**!\***
 Reference all arguments of previous command
 
 **ctrl-r**

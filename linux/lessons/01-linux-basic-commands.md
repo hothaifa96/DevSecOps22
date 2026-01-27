@@ -1,3 +1,8 @@
+---
+layout: default
+title: Linux Basic Commands
+---
+
 # Linux 1
 
 ## Linux and Unix History

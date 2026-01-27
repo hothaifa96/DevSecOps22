@@ -1,3 +1,8 @@
+---
+layout: default
+title: Linux Fundamentals Lab
+---
+
 # Linux Fundamentals Lab Exercises
 
 ## Lab Overview
@@ -249,6 +254,5 @@ Sort the contents of input.txt by using it as standard input rather than as a co
 
 **Task 6.13**
 Combine input and output redirection to sort input.txt and save the result to sorted_output.txt.
-
 
 ## GOODLUCK
