@@ -3,7 +3,7 @@ layout: default
 title: Linux Basic Commands
 ---
 
-# Linux 1
+# Linux Basic Commands
 
 ## Linux and Unix History
 

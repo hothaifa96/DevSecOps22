@@ -495,7 +495,7 @@ body {
     
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-number" id="lessonsCount">1</span>
+        <span class="stat-number" id="lessonsCount">3</span>
         <span class="stat-label">Lessons</span>
       </div>
       <div class="stat">
@@ -561,6 +561,16 @@ body {
             <p class="item-description">Introduction to Linux, shell basics, filesystem structure, navigation, file operations, piping, and redirection</p>
             <div class="item-links">
               <a href="{{ site.baseurl }}/linux/lessons/02-linux-basic-commands/" class="item-link">📖 Start Lesson</a>
+            </div>
+          </li>
+          <li class="content-item">
+            <div class="item-header">
+              <span class="item-title">Linux for DevOps - Lesson 3</span>
+              <span class="item-badge">Beginner</span>
+            </div>
+            <p class="item-description">Wildcards, aliases, environment variables, PATH, prompt customization, bashrc, number systems, and file permissions</p>
+            <div class="item-links">
+              <a href="{{ site.baseurl }}/linux/lessons/03-linux/" class="item-link">📖 Start Lesson</a>
             </div>
           </li>
         </ul>
@@ -819,7 +829,7 @@ function showSection(section) {
 
 // Animate counters on load
 document.addEventListener('DOMContentLoaded', function() {
-  animateCounter('lessonsCount', 1);
+  animateCounter('lessonsCount', 3);
   animateCounter('labsCount', 1);
   animateCounter('cheatsheetsCount', 1);
 });

@@ -22,18 +22,28 @@ Each exercise set contains tasks you must complete. Read each task carefully and
 **Task 1.1**
 Display your current username and verify it matches what appears in your terminal prompt.
 
+### **whoami**
+
 **Task 1.2**
 Find out the hostname of your machine and compare it with what appears in your prompt after the @ symbol.
+
+### **hostname**
 
 **Task 1.3**
 Display comprehensive system information including kernel name, version, hostname, and hardware architecture.
 
+### **uname -a**
+
 **Task 1.4**
 Display only the kernel release version.
+
+### **uname -r**
+
 
 **Task 1.5**
 Display only the machine hardware architecture.
 
+### **uname -m**
 **Task 1.6**
 Attempt to read the /etc/shadow file as a regular user. Observe what happens.
 
