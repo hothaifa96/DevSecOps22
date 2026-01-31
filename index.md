@@ -492,21 +492,27 @@ body {
   <div class="hero-content">
     <h1>DevSecOps-22</h1>
     <p class="hero-subtitle">Master DevSecOps with Hands-On Learning Experience</p>
-    
+
+    {% assign linux_lessons = site.pages | where_exp: "p", "p.url contains '/linux/lessons/'" | sort: "url" %}
+    {% assign linux_labs = site.pages | where_exp: "p", "p.url contains '/linux/labs/'" | sort: "url" %}
+    {% assign linux_cheatsheets = site.pages | where_exp: "p", "p.url contains '/linux/cheatsheets/'" | sort: "url" %}
+    {% assign linux_pdfs = site.static_files | where_exp: "f", "f.path contains '/linux/pdf/'" | where_exp: "f", "f.extname == '.pdf'" | sort: "path" %}
+
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-number" id="lessonsCount">3</span>
+        <span class="stat-number" id="lessonsCount">{{ linux_lessons | size }}</span>
         <span class="stat-label">Lessons</span>
       </div>
       <div class="stat">
-        <span class="stat-number" id="labsCount">1</span>
+        <span class="stat-number" id="labsCount">{{ linux_labs | size }}</span>
         <span class="stat-label">Labs</span>
       </div>
       <div class="stat">
-        <span class="stat-number" id="cheatsheetsCount">1</span>
+        <span class="stat-number" id="cheatsheetsCount">{{ linux_cheatsheets | size }}</span>
         <span class="stat-label">Cheatsheets</span>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -543,36 +549,18 @@ body {
         <p class="card-description">Comprehensive lessons covering Linux fundamentals from basics to advanced topics</p>
         
         <ul class="content-list">
+          {% for p in linux_lessons %}
           <li class="content-item">
             <div class="item-header">
-              <span class="item-title">Computer Basics: Hardware and Operating Systems</span>
-              <span class="item-badge">Beginner</span>
+              <span class="item-title">{{ p.title | escape }}</span>
+              <span class="item-badge">Lesson</span>
             </div>
-            <p class="item-description">Understand CPU, registers, cache, RAM, storage, kernel, and how operating systems work</p>
+            <p class="item-description">Open the lesson page</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/lessons/01-computer-basics/" class="item-link">📖 Start Lesson</a>
+              <a href="{{ site.baseurl }}{{ p.url }}" class="item-link">📖 Start Lesson</a>
             </div>
           </li>
-          <li class="content-item">
-            <div class="item-header">
-              <span class="item-title">Linux Basic Commands</span>
-              <span class="item-badge">Beginner</span>
-            </div>
-            <p class="item-description">Introduction to Linux, shell basics, filesystem structure, navigation, file operations, piping, and redirection</p>
-            <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/lessons/02-linux-basic-commands/" class="item-link">📖 Start Lesson</a>
-            </div>
-          </li>
-          <li class="content-item">
-            <div class="item-header">
-              <span class="item-title">Linux for DevOps - Lesson 3</span>
-              <span class="item-badge">Beginner</span>
-            </div>
-            <p class="item-description">Wildcards, aliases, environment variables, PATH, prompt customization, bashrc, number systems, and file permissions</p>
-            <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/lessons/03-linux/" class="item-link">📖 Start Lesson</a>
-            </div>
-          </li>
+          {% endfor %}
         </ul>
         
         <div class="tags">
@@ -591,16 +579,18 @@ body {
         <p class="card-description">Hands-on exercises to practice and reinforce your Linux skills</p>
         
         <ul class="content-list">
+          {% for p in linux_labs %}
           <li class="content-item">
             <div class="item-header">
-              <span class="item-title">Linux Fundamentals Lab</span>
-              <span class="item-badge">Hands-on</span>
+              <span class="item-title">{{ p.title | escape }}</span>
+              <span class="item-badge">Lab</span>
             </div>
-            <p class="item-description">Practice essential Linux commands including navigation, file manipulation, permissions, and I/O redirection</p>
+            <p class="item-description">Open the lab page</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/labs/1-lab/" class="item-link">🧪 Start Lab</a>
+              <a href="{{ site.baseurl }}{{ p.url }}" class="item-link">🧪 Start Lab</a>
             </div>
           </li>
+          {% endfor %}
         </ul>
         
         <div class="tags">
@@ -619,16 +609,18 @@ body {
         <p class="card-description">Quick reference guides for common Linux commands and operations</p>
         
         <ul class="content-list">
+          {% for p in linux_cheatsheets %}
           <li class="content-item">
             <div class="item-header">
-              <span class="item-title">Basic Linux Commands</span>
-              <span class="item-badge">Reference</span>
+              <span class="item-title">{{ p.title | escape }}</span>
+              <span class="item-badge">Cheatsheet</span>
             </div>
-            <p class="item-description">Comprehensive cheatsheet covering system info, navigation, file operations, text processing, networking, and more</p>
+            <p class="item-description">Open the cheatsheet page</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/cheatsheets/basic-linux-commands/" class="item-link">📑 View Cheatsheet</a>
+              <a href="{{ site.baseurl }}{{ p.url }}" class="item-link">📑 View Cheatsheet</a>
             </div>
           </li>
+          {% endfor %}
         </ul>
         
         <div class="tags">
@@ -647,26 +639,18 @@ body {
         <p class="card-description">Downloadable PDF materials for offline learning</p>
         
         <ul class="content-list">
+          {% for f in linux_pdfs %}
           <li class="content-item">
             <div class="item-header">
-              <span class="item-title">Linux Introduction</span>
+              <span class="item-title">{{ f.basename | replace: '-', ' ' | replace: '_', ' ' | escape }}</span>
               <span class="item-badge">PDF</span>
             </div>
-            <p class="item-description">Introduction to Linux concepts and fundamentals</p>
+            <p class="item-description">Download PDF</p>
             <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/pdf/linux-intro.pdf" class="item-link">⬇️ Download PDF</a>
+              <a href="{{ site.baseurl }}{{ f.path }}" class="item-link">⬇️ Download PDF</a>
             </div>
           </li>
-          <li class="content-item">
-            <div class="item-header">
-              <span class="item-title">Linux Basic Commands PDF</span>
-              <span class="item-badge">PDF</span>
-            </div>
-            <p class="item-description">Printable reference for basic Linux commands</p>
-            <div class="item-links">
-              <a href="{{ site.baseurl }}/linux/pdf/linux%20basic-commands.pdf" class="item-link">⬇️ Download PDF</a>
-            </div>
-          </li>
+          {% endfor %}
         </ul>
         
         <div class="tags">
@@ -829,9 +813,9 @@ function showSection(section) {
 
 // Animate counters on load
 document.addEventListener('DOMContentLoaded', function() {
-  animateCounter('lessonsCount', 3);
-  animateCounter('labsCount', 1);
-  animateCounter('cheatsheetsCount', 1);
+  animateCounter('lessonsCount', {{ linux_lessons | size }});
+  animateCounter('labsCount', {{ linux_labs | size }});
+  animateCounter('cheatsheetsCount', {{ linux_cheatsheets | size }});
 });
 
 function animateCounter(id, target) {
