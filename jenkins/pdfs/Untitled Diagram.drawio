@@ -1,0 +1,77 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram name="Page-1" id="szhLSJd-JwsmRsKWBbid">
+    <mxGraphModel dx="2052" dy="1496" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yHyuapJWuVSy4riDqC-F-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yHyuapJWuVSy4riDqC-F-1" target="yHyuapJWuVSy4riDqC-F-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-1" value="Repo&lt;br&gt;&lt;br&gt;&lt;br&gt;jenkinsfile" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="131" y="208.13" width="120" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-2" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" vertex="1" parent="1">
+          <mxGeometry x="331" y="43.129999999999995" width="75" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yHyuapJWuVSy4riDqC-F-4" target="yHyuapJWuVSy4riDqC-F-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=http://51.84.216.171:8080/static/977804a8/images/svgs/logo.svg;" vertex="1" parent="1">
+          <mxGeometry x="626" y="25" width="80.59" height="111.25" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-6" value="pipeline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="612" y="154.13" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-7" value="pipeline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="612" y="184.13" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-8" value="pipeline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="612" y="214.13" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-9" value="pipeline&amp;nbsp;&lt;br&gt;V1&lt;div&gt;&lt;br&gt;create a 3 stages pipeline&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;build&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;test&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;deploy&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;in each stage start by echo and print&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;====== &amp;lt;stage name&amp;gt; stage =======&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="19" y="360" width="312" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-10" value="add a post action always to delete the workspace&lt;br&gt;(clear)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="251" y="344" width="148" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-13" value="http://51.84.216.171:8080/" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="579" y="3" width="162" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-14" value="github" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="287.5" y="19" width="162" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-15" value="your-pc" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="172" width="162" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.623;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="yHyuapJWuVSy4riDqC-F-16" target="yHyuapJWuVSy4riDqC-F-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-16" value="V2&lt;br&gt;&lt;br&gt;in build stage create a file with the name app.txt with some text&amp;nbsp;&lt;br&gt;in test stage check if the file exists&amp;nbsp;&lt;br&gt;in deploy stage copy the file into a new folder named deploy&lt;br&gt;&#39;sh&#39;&lt;br&gt;&lt;br&gt;dont forget the workspace cleaning" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="19" y="545" width="312" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-18" value="V3&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;lets start with config&#39;s for pipeline&amp;nbsp;&lt;br&gt;keep the 3 stages from before add a env named APP_VERSION default value 1.0&lt;br&gt;APP_NAME&amp;nbsp;&lt;br&gt;DOCKER_REPO&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;and in the build stage print a proper message that contains all of those env&lt;br&gt;&lt;br&gt;in the test stage please print the pipeline name dynamically and the build number (built_in env)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510.29" y="348" width="312" height="189" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yHyuapJWuVSy4riDqC-F-19" target="yHyuapJWuVSy4riDqC-F-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="714" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-19" value="V3.5&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;write a python script that can search for a word inside a file&amp;nbsp;&lt;br&gt;&lt;br&gt;the word can be received as an argument to python and and the file path must be taken from env named FILE_TO_TEST&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="509.29" y="555" width="313" height="181" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yHyuapJWuVSy4riDqC-F-20" target="yHyuapJWuVSy4riDqC-F-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-20" value="V4&lt;div&gt;now in this version the main focus will be on the test stage&amp;nbsp;&lt;br&gt;&lt;p class=&quot;p1&quot;&gt;&lt;span class=&quot;s1&quot;&gt;1. Build Stage&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot;&gt;&lt;span class=&quot;s2&quot;&gt;After the initial echo:&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Create a new file named build-info.txt.&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;The file must contain:&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;The application name.&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;The Jenkins build number.&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;The current date.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s2&quot;&gt;Add an environment variable that contains the &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s4&quot;&gt;path/name of the build-info.txt file&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s2&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;" vertex="1" parent="1">
+          <mxGeometry x="14" y="760" width="345" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="yHyuapJWuVSy4riDqC-F-22" value="V4&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s1&quot;&gt;After the initial echo, run two tests &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s2&quot;&gt;in parallel&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s1&quot;&gt;:&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;p1&quot;&gt;&lt;span class=&quot;s1&quot;&gt;1. file Stage:&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Create a Bash script that checks whether app.txt exists.&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;The test should return a failure exit code if the file does not exist.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot;&gt;&lt;span class=&quot;s1&quot;&gt;2. build info Stage&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot;&gt;&lt;span class=&quot;s2&quot;&gt;R&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s1&quot;&gt;un the Python test script developed in &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; class=&quot;s2&quot;&gt;V3.5&lt;br&gt;execute it with&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;python3 test.py arg&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If the required word/value does not exist or does not match the expected data, stop the process using Python’s sys.exit().&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;" vertex="1" parent="1">
+          <mxGeometry x="469.29" y="760" width="353" height="225" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
