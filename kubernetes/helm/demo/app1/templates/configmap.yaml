@@ -1,0 +1,10 @@
+# apiVersion: v1
+# kind: Configmap
+# metadata:
+#     name:  {{ include "app1.fullname" . }}
+#     namespace: default
+# data:
+#     - {{ .Values.appdata.key }}: {{ .Values.appdata.value }}
+#     #  - env: prod
+
+    
