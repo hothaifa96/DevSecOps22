@@ -1,0 +1,29 @@
+controller:
+  componentName: "jenkins-controller"
+  serviceType: "ClusterIP"
+  
+  usePodSecurityContext: true
+  runAsUser: 1000
+  fsGroup: 1000
+  fsGroupChangePolicy: "OnRootMismatch"
+
+  customInitContainers:
+    - name: volume-permissions
+      image: busybox
+      imagePullPolicy: IfNotPresent
+      command: ["sh", "-c", "chown -R 1000:1000 /var/jenkins_home"]
+      securityContext:
+        runAsUser: 0
+        runAsNonRoot: false
+      volumeMounts:
+        - name: jenkins-home
+          mountPath: /var/jenkins_home
+
+  installPlugins:
+    - "kubernetes"
+    - "workflow-aggregator"
+    - "git"
+    - "configuration-as-code"
+
+agent:
+  enabled: true
