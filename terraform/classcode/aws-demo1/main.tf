@@ -38,7 +38,7 @@ resource "aws_internet_gateway" "gateway" {
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
 
-  route  {
+  route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.gateway.id
   }
@@ -85,10 +85,10 @@ resource "aws_security_group" "web" {
 # ----- ec2 --------
 
 resource "aws_instance" "my-ec2" {
-  ami                    = var.default_ami
-  instance_type          = var.type
-  subnet_id              = aws_subnet.public.id
-  vpc_security_group_ids = [aws_security_group.web.id]
+  ami                         = var.default_ami
+  instance_type               = var.type
+  subnet_id                   = aws_subnet.public.id
+  vpc_security_group_ids      = [aws_security_group.web.id]
   associate_public_ip_address = true
 
   user_data = <<-EOF
