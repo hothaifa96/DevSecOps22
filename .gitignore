@@ -1,0 +1,27 @@
+# Local .terraform directories (contains downloaded providers and modules)
+.terraform/
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Do not commit TF state files (they contain sensitive resource passwords/secrets)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all variable files (often contain production secrets)
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are meant for local testing adjustments
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI history files
+.terraform.lock.hcl
