@@ -1,0 +1,117 @@
+pipeline{
+    agent any
+    environment{
+        DOCKER_REPO="hothaifaz11/jokes-api"
+        DOCKER_IMAGE="hothaifaz11/jokes-api:v$BUILD_NUMBER"
+        CONTAINER_NAME="$JOB_NAME"
+        // APPLCIATION_PORT
+        TEST_REPO="https://github.com/devops-org-hodi/jokes-test"
+        TEST_DIR="jokes-test"
+        DEPLOYMENT_REPO="https://github.com/devops-org-hodi/jokes-deployment"
+        DEPLOYMNET_DIR="jokes-deployment"
+
+    }
+    stages{
+        stage("Build"){
+           steps{
+                withCredentials([usernamePassword
+                (credentialsId: 'docker-creds',
+                 passwordVariable: 'PASS',
+                  usernameVariable: 'USERNAME')]) {
+                    sh """ echo $PASS | docker login -u $USERNAME --password-stdin """
+                    echo "======= building docker image ========"
+                    sh "docker buildx create --name multiarch --use --bootstrap "
+                    sh "docker buildx build --platform linux/arm64,linux/amd64 -t $DOCKER_IMAGE --push ."
+                  }
+           }
+            post{
+                success{
+                    sh "docker pull $DOCKER_IMAGE"
+                    echo "------- verfy image tag ----------"
+                    sh "docker image ls | grep -i $DOCKER_REPO"
+                }
+            }
+           
+        }
+        stage("prepare for testing"){
+            steps{
+                sh """docker run -d \
+                      --name $CONTAINER_NAME \
+                      -p 5000:5000 \
+                      $DOCKER_IMAGE
+                      """
+                sh "git clone $TEST_REPO"
+            }
+        }
+        stage("test"){
+            parallel{
+                stage("sanity test"){
+                    steps{
+                        dir("$TEST_DIR/sanity-test") {
+                            sh "chmod 777 test.sh"
+                            retry(3){
+                                sh "./test.sh"
+                            }
+                        }           
+                    }
+                }
+                stage("test2 test"){
+                    steps{
+                        dir("$TEST_DIR/sanity-test") {
+                            sh "chmod 777 test.sh"
+                            timeout(time: 3, unit: 'SECONDS'){
+                                sh "./test.sh"
+                            } 
+                        }           
+                    }
+                }   
+            }
+        }
+        // stage("push to docker hub"){
+        //     steps{
+        //         withCredentials([usernamePassword
+        //         (credentialsId: 'docker-creds',
+        //          passwordVariable: 'PASS',
+        //           usernameVariable: 'USERNAME')]) {
+        //             sh """ echo $PASS | docker login -u $USERNAME --password-stdin """
+        //             sh "docker push $DOCKER_IMAGE "
+        //         }
+        //     }
+        // }
+        stage("update manifests"){
+            steps{
+                withCredentials([usernamePassword
+                (credentialsId: 'github-cred',
+                passwordVariable: 'PASS',
+                usernameVariable: 'USER')]) {
+                    sh "git clone https://$USER:$PASS@github.com/devops-org-hodi/jokes-deployment "
+                    dir("$DEPLOYMNET_DIR/kubernetes"){
+                        sh """ 
+                            sed -i 's|image:.*|image: $DOCKER_IMAGE|g' jokes-manifest.yaml
+                            git config user.name jenkins
+                            git config user.email jenkins@jenkins.com  
+                            git add jokes-manifest.yaml
+                            git commit -m "jenkins: build $BUILD_NUMBER of job $JOB_NAME  see $JOB_DISPLAY_URL"
+                            git push
+                        """
+                    }
+                }
+          }
+        }
+    }
+    post{
+        always{
+            sh "docker rm -f $CONTAINER_NAME"
+            cleanWs()
+            sh "docker rmi $DOCKER_IMAGE"
+        }
+        success{
+            echo "========pipeline executed successfully ========"
+        }
+        failure{
+            echo "========pipeline execution failed========"
+        }
+    }
+}
+
+// doc
